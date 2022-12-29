@@ -1,8 +1,5 @@
 package vl.klepikov.spring.boot.ex.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.transaction.annotation.Transactional;
-import vl.klepikov.spring.boot.ex.dao.PersonDAOImpl;
 import vl.klepikov.spring.boot.ex.model.Person;
 
 import java.util.List;

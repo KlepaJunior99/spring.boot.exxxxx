@@ -3,17 +3,17 @@ package vl.klepikov.spring.boot.ex.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-import vl.klepikov.spring.boot.ex.dao.PersonDAOImpl;
+import vl.klepikov.spring.boot.ex.dao.PersonDAO;
 import vl.klepikov.spring.boot.ex.model.Person;
 
 import java.util.List;
 
 @Component
-public class ServiceImpl implements Service {
-    private PersonDAOImpl personDAO;
+public class PersonServiceImpl implements PersonService {
+    private PersonDAO personDAO;
 
     @Autowired
-    public ServiceImpl(PersonDAOImpl personDAO) {
+    public PersonServiceImpl(PersonDAO personDAO) {
         this.personDAO = personDAO;
     }
 

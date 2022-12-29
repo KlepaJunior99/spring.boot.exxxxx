@@ -1,12 +1,11 @@
-package vl.klepikov.spring.boot.ex.dao;
+package vl.klepikov.spring.boot.ex.service;
 
 import vl.klepikov.spring.boot.ex.model.Person;
-
 import java.util.List;
 
-public interface PersonDAO {
+public interface PersonService {
 
-    List<Person> index() ;
+    List<Person> index();
 
     Person show(int id);
 
@@ -14,5 +13,5 @@ public interface PersonDAO {
 
     void update(Person updatedPerson);
 
-    void delete(int id) ;
+    void delete(int id);
 }

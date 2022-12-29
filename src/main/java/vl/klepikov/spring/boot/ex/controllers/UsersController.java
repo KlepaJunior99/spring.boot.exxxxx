@@ -7,17 +7,17 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import vl.klepikov.spring.boot.ex.model.Person;
-import vl.klepikov.spring.boot.ex.service.Service;
+import vl.klepikov.spring.boot.ex.service.ServiceImpl;
 
 
 @Controller
 @RequestMapping("/users")
 public class UsersController {
 
-    private final Service service;
+    private final ServiceImpl service;
 
     @Autowired
-    public UsersController(Service service) {
+    public UsersController(ServiceImpl service) {
         this.service = service;
     }
 

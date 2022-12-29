@@ -1,44 +1,21 @@
 package vl.klepikov.spring.boot.ex.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import vl.klepikov.spring.boot.ex.dao.PersonDAOImpl;
 import vl.klepikov.spring.boot.ex.model.Person;
 
 import java.util.List;
 
-@Component
-public class Service {
-    private PersonDAOImpl personDAO;
+public interface Service {
 
-    @Autowired
-    public Service(PersonDAOImpl personDAO) {
-        this.personDAO = personDAO;
-    }
+    public List<Person> index();
 
-    @Transactional(readOnly = true)
-    public List<Person> index() {
-        return personDAO.index();
-    }
+    public Person show(int id);
 
-    @Transactional()
-    public Person show(int id) {
-        return personDAO.show(id);
-    }
+    public void save(Person person);
 
-    @Transactional
-    public void save(Person person) {
-        personDAO.save(person);
-    }
+    public void update(Person updatedPerson);
 
-    @Transactional
-    public void update(Person updatedPerson) {
-        personDAO.update(updatedPerson);
-    }
-
-    @Transactional
-    public void delete(int id) {
-        personDAO.delete(id);
-    }
+    public void delete(int id);
 }
